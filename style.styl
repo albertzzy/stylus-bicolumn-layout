@@ -1,0 +1,37 @@
+boxLayout(boxWidth,clientWidth)
+	width:(boxWidth/clientWidth)*100%
+	margin:0 auto;
+
+	display: -webkit-box;     /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;        /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;     /* TWEENER - IE 10 */
+	display: -webkit-flex;    /* NEW - Chrome */
+	display: flex;   
+
+	flex-flow:row wrap;	
+	justify-content:space-between;
+
+
+itemLayout(itemWidth,boxWidth)
+	-webkit-box-flex: 0 0 (itemWidth/boxWidth)*100%;   /* OLD - iOS 6-, Safari 3.1-6 */
+	-moz-box-flex: 0 0 (itemWidth/boxWidth)*100%;      /* OLD - Firefox 19- */
+	width: (itemWidth/boxWidth)*100%;                  /*For old syntax, otherwise collapses. */
+	-webkit-flex: 0 0 (itemWidth/boxWidth)*100%;       /* Chrome */
+	-ms-flex: 0 0 (itemWidth/boxWidth)*100%;           /* IE 10 */
+	flex: 0 0 (itemWidth/boxWidth)*100%;
+	
+	background-color:red;
+	height:5em;
+	margin-bottom:2em;
+
+
+/*flexBiColumnLayout(boxWidth,itemWidth,clientWidth)
+	boxLayout(boxWidth,clientWidth)
+	itemLayout(itemWidth,boxWidth)*/
+
+
+/*.box
+	boxLayout(9,10)
+.box
+	.item
+		itemLayout(4.5,10)*/
